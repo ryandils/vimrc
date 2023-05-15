@@ -2,8 +2,14 @@ syntax on
 syntax enable
 set t_Co=256
 set number
-rtp^="/Users/ryandils/.opam/4.05.0/share/ocp-indent/vim"
-execute pathogen#infect()
-let g:opamshare = substitute(system('opam config var share'),'\n$','','''')
-execute "set rtp+=" . g:opamshare . "/merlin/vim"
-let g:syntastic_ocaml_checkers = ['merlin']
+nnoremap j gj
+nnoremap k gk
+set spell
+highlight clear SpellBad
+highlight SpellBad term=underline cterm=underline gui=underline
+highlight clear SpellCap
+highlight SpellCap term=underline cterm=underline gui=underline
+highlight clear SpellRare
+highlight SpellRare term=underline cterm=underline gui=underline
+highlight clear SpellLocal
+highlight SpellLocal term=underline cterm=underline gui=underline
