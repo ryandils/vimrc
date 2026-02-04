@@ -1,15 +1,23 @@
-syntax on
-syntax enable
-set t_Co=256
+set runtimepath+=~/.vim_runtime
+
+source ~/.vim_runtime/vimrcs/basic.vim
+source ~/.vim_runtime/vimrcs/filetypes.vim
+source ~/.vim_runtime/vimrcs/plugins_config.vim
+source ~/.vim_runtime/vimrcs/extended.vim
+try
+  source ~/.vim_runtime/my_configs.vim
+catch
+endtry
+
 set number
+set wrap
+set linebreak
 nnoremap j gj
 nnoremap k gk
-set spell
-highlight clear SpellBad
-highlight SpellBad term=underline cterm=underline gui=underline
-highlight clear SpellCap
-highlight SpellCap term=underline cterm=underline gui=underline
-highlight clear SpellRare
-highlight SpellRare term=underline cterm=underline gui=underline
-highlight clear SpellLocal
-highlight SpellLocal term=underline cterm=underline gui=underline
+set updatetime=3000
+set tabstop=2
+set shiftwidth=2
+set expandtab
+
+" Set color scheme
+colorscheme desert
